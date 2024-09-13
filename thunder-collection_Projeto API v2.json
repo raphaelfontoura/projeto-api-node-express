@@ -1,0 +1,86 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Projeto API v2",
+    "collectionId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+    "dateExported": "2024-09-13T15:18:44.030Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "83c44b55-2618-4d84-968c-b5bb9de15e8e",
+            "colId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+            "containerId": "",
+            "name": "GET Produtos",
+            "url": "http://localhost:3000/api/v2/produtos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-13T15:01:23.239Z",
+            "modified": "2024-09-13T15:01:37.550Z",
+            "headers": []
+        },
+        {
+            "_id": "21a96124-a398-4d0f-a2bf-cff7f245f644",
+            "colId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+            "containerId": "",
+            "name": "GET Produtos id",
+            "url": "http://localhost:3000/api/v2/produtos/7",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-13T15:01:23.240Z",
+            "modified": "2024-09-13T15:18:39.710Z",
+            "headers": []
+        },
+        {
+            "_id": "e760fa6d-5d33-4204-9950-0aefe9bd2bbe",
+            "colId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+            "containerId": "",
+            "name": "DEL Produto",
+            "url": "http://localhost:3000/api/v2/produtos/55",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-09-13T15:01:23.241Z",
+            "modified": "2024-09-13T15:18:19.885Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"descricao\":\"Camiseta\", \"marca\":\"Adidas\", \"preco\": 59.99}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b3a82e97-a08a-426d-ba59-89800a5fe5fe",
+            "colId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+            "containerId": "",
+            "name": "POST Produtos",
+            "url": "http://localhost:3000/api/v2/produtos",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-09-13T15:01:23.243Z",
+            "modified": "2024-09-13T15:17:32.156Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"descricao\":\"Camiseta\", \"marca\":\"Adidas\", \"preco\": 59.99}",
+                "form": []
+            }
+        },
+        {
+            "_id": "157f8e4e-5603-41e1-8f27-19432826c4b0",
+            "colId": "e016f3f2-9f45-4c63-852c-0364d2cbb404",
+            "containerId": "",
+            "name": "PUT Produto",
+            "url": "http://localhost:3000/api/v2/produtos/3",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-09-13T15:01:23.244Z",
+            "modified": "2024-09-13T15:18:29.004Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"descricao\":\"Boné\", \"marca\":\"Mizuno\", \"preco\": 79.99}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "0qCZwuJZSu_rlqzZZT3TU6pvEaCvaSQgxrKeAyArJGJ59sBa3104UmD3s4Bdep5gld057YzYniRBTfBnZpQ2IQ"
+}
