@@ -17,7 +17,7 @@ apiRouterV2.get('/produtos/:id', function(req, res, next) {
   if (id) {
     idInt = Number.parseInt(id)
     knex('produtos')
-      .where('id', idInt)
+      .where({id: idInt})
       .first('*')
       .then(produto => {
         if (produto)
@@ -34,9 +34,9 @@ apiRouterV2.get('/produtos/:id', function(req, res, next) {
 apiRouterV2.post('/produtos', function(req, res, next) {
   let produto = req.body
   knex('produtos')
-    .insert(produto)
-    .then(produto => {
-      res.status(201).json({ message: `Produto inserido com sucesso`, data: {id: produto} })
+    .insert(produto, ['id'])
+    .then(id => {
+      res.status(201).json({ message: `Produto inserido com sucesso`, data: id })
     })
     .catch(err => res.status(500).json({ message: `Erro ao inserir produto: ${err.message}`}))
 });
