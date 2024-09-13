@@ -61,20 +61,11 @@ apiRouterV2.put('/produtos/:id', function(req, res, next) {
   let produto = req.body;
   if (id) {
     idInt = Number.parseInt(id)
-    let idx = produtos.findIndex(o => o.id === idInt);
-    if (idx > -1) {
-      produtos[idx].descricao = produto.descricao
-      produtos[idx].marca = produto.marca
-      produtos[idx].preco = produto.preco
-
-      res.status(200).json(
-        { message: `Produto alterado com sucesso`, 
-          data: produtos[idx]
-        }
-      )
-    } else {
-      res.status(404).json({ message: `Produto não encontrado.` });
-    }
+    knex('produtos')
+      .where('id', idInt)
+      .update(produto, ['id', 'descricao', 'marca', 'preco'])
+      .then(prod => res.status(200).json(prod))
+      .catch(err => res.status(500).json({ message: `Erro ao atualizar produto: ${err.message}`}))
   }
   else {
     res.status(404).json({ message: `Produto não encontrado.` });
